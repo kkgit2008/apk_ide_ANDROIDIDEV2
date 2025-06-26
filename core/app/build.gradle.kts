@@ -56,22 +56,7 @@ android {
 
 
     // ****** 修改包名和版本后缀 ******
-    
-    buildTypes { //NO.1
-        debug {
-            //signingConfig signingConfigs.debug
-            applicationIdSuffix = ".debug"
-            versionNameSuffix = " (debug)"
-    
-        }
-        release {
-            //signingConfig signingConfigs.release
-            applicationIdSuffix = ".test"
-            versionNameSuffix = " (test)"
-            
-            isShrinkResources = true
-        }
-    }
+    // 修改后出错，已回滚
     // ****** 修改包名和版本后缀 ******    
 
 
