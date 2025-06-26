@@ -2,7 +2,7 @@ name: Build Release APK
 
 on:
   push:
-    #branches: ["main"]
+    branches: ["kkgit2008-patch-1"]
     paths-ignore:
       - '**.md'
       - 'fastlane/**'
