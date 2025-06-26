@@ -54,11 +54,27 @@ android {
     generateLocaleConfig = true
   }
 
-  buildTypes {
-    release {
-      isShrinkResources = true
+
+    // ****** 修改包名和版本后缀 ******
+    
+    buildTypes { //NO.1
+        debug {
+            //signingConfig signingConfigs.debug
+            applicationIdSuffix '.debug'
+            versionNameSuffix ' (debug)'
+    
+        }
+        release {
+            signingConfig signingConfigs.release
+            applicationIdSuffix '.test'
+            versionNameSuffix ' (test)'
+            
+            isShrinkResources = true
+        }
     }
-  }
+    // ****** 修改包名和版本后缀 ******    
+
+
 
   lint {
     abortOnError = false
