@@ -29,9 +29,12 @@
   <a href="https://t.me/androidide_discussions">Join us on Telegram</a>
 </p>
 
-> [!WARNING]
+> [!INFO]
 > 
-> THIS PROJECT IS NOT MAINTAINED ANYMORE.
+> 版本定义文件位于以下两处: 
+> ./composite-builds/build-logic/common/src/main/java/com/itsaky/androidide/build/config/BuildConfig.kt
+> ./gradle/libs.versions.toml
+
 
 ## Features
 
