@@ -60,14 +60,14 @@ android {
     buildTypes { //NO.1
         debug {
             //signingConfig signingConfigs.debug
-            applicationIdSuffix '.debug'
-            versionNameSuffix ' (debug)'
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = " (debug)"
     
         }
         release {
             //signingConfig signingConfigs.release
-            applicationIdSuffix '.test'
-            versionNameSuffix ' (test)'
+            applicationIdSuffix = ".test"
+            versionNameSuffix = " (test)"
             
             isShrinkResources = true
         }
