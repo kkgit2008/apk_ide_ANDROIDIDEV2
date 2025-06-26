@@ -1,4 +1,4 @@
-name: Build Release APK
+name: Build Bebug&Release APK
 
 on:
   push:
@@ -27,7 +27,7 @@ env:
 
 jobs:
   build_apk:
-    name: Build Release APK
+    name: Build Bebug&Release APK
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -44,6 +44,21 @@ jobs:
 
       - name: Make Gradle executable
         run: chmod +x ./gradlew
+
+
+      - name: Build debug APK
+        run: ./gradlew :core:app:assembleDebug
+
+      - name: Copy debug APKs
+        run: |
+          cp core/app/build/outputs/apk/debug/app-arm64-v8a-debug-unsigned.apk ./
+
+      - name: Upload APKs
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-apks
+          path: app-arm64-v8a-debug-unsigned.apk
+
 
       - name: Build release APK
         run: ./gradlew :core:app:assembleRelease
