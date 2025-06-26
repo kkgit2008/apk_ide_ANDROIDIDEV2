@@ -65,7 +65,7 @@ android {
     
         }
         release {
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
             applicationIdSuffix '.test'
             versionNameSuffix ' (test)'
             
